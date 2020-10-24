@@ -1,14 +1,70 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fitnected</title>
+    <link rel='stylesheet' href='/stylesheets/main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
-  <%= yield %>
+  <body>
+    <header>
+      <figure>
+        <img src="/images/fitnected_logo.png" alt="app_logo">
+      </figure>
 
-</body>
+      <nav>
+        <% if logged_in? %>
+          <form action="/logout" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+          </form>
+
+          Logged in as <%= current_user['first_name'] %>
+
+          <figure>
+            <img src="<%= current_user['avatar_url']%>" alt="user_avatar">
+          </figure> 
+        <% else %>
+          <a href="/register">Sign Up</a>
+          <a href="/login">Login</a>
+          <figure>
+            <img src="/images/default_user_icon.png" alt="annoymous_avatar">
+          </figure>
+        <% end %>
+      </nav>
+
+      <section class="app-titles">
+        <h1><span class="fit">Fit</span>nected</h1>
+        <h2></h2>
+      </section>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/fitnected/about">About</a></li>
+          <li><a href="/fitnected/<%= current_user['first_name'] %>">Profile</a></li>
+          <li><a href="/fitnected/exercises/<%= current_user['first_name'] %>">Exercise Tracker</a></li>
+          <li><a href="/fitnected/diet/<%= current_user['first_name'] %>">Diet Tracker</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <%= yield %>
+      </main>
+    </section>
+
+    <footer>
+      <p>&copy; Copyright 2020, Fitnected, Inc. All rights reserved.</p>
+      <p>65 Parkes Rd, Melbourne, VIC 3004 Australia. Tel: +61 3 8368 0286</p>
+      <nav>
+        <ul>
+          <li><a href="/fitnected/contact">Contact us</a></li>
+          <li><a href="/fitnected/privacy">Privacy Policies</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
