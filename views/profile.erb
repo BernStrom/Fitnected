@@ -1,0 +1,28 @@
+<section class=profile-details>
+    
+    <figure>
+        <img src="<%= current_user['avatar_url'] %>" alt="user_avatar"> 
+    </figure>
+
+    <a href="/profile/<%= current_user['id'] %>/edit">Edit Profile</a>
+
+    <ul>
+        <div class="details-left-section">
+            <li>First Name: <span><%= current_user['first_name'] %></span></li>
+            <li>Email: <span><%= current_user['email']%></span></li>
+            <li>Current Weight: <span><%= current_user['current_weight'] %></span></li>
+        </div>
+        
+        <div class="details-right-section"> 
+            <li>Last Name: <span><%= current_user['last_name'] %></span></li>
+            <li>Fit Goal: <span><%= current_user['fitness_goal'] %></span></li>
+            <li>Goal Weight: <span><%= current_user['goal_weight'] %></span></li>
+        </div>
+    </ul>
+
+    <form action="/profile/<%= current_user['id'] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button class="delete-btn">Delete</button>
+        <p>This deletes your user profile entirely!</p>
+    </form>
+</section>

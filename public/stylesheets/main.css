@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 80vw;
+    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+header {
+    display: flex;
+}
+
+.register {
+    width: 700px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register input {
+    border: 0;
+    padding: 0 1%;
+    margin-bottom: 2%;
+    width: 150px;
+    height: 25px;
+    border: 1px solid hsla(0, 16%, 70%, .9);
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    background: transparent;
+}
+
+::placeholder { /* Support for Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(167, 60, 60);
+    font-size: 12px;
+}
+
+.register button {
+    width: 150px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    outline: none;
+    transition: 400ms;
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: .8;
+}
+
+.register button:hover {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.login-create-section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login-create-section a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.login-create-section button {
+    width: 80px;
+    height: 25px;
+    border: 0;
+    border-radius: 30px;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    outline: none;
+    transition: 400ms;
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: .8;
+}
+
+.login-create-section button:hover {
+    transform: translateX(-10px);
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login label, .login input {
+    margin-bottom: 3%;
+}
+
+.login input {
+    border: 0;
+    padding: 0 8%;
+    margin-bottom: 1%;
+    width: 150px;
+    height: 25px;
+    border: 1px solid hsla(0, 16%, 70%, .9);
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px hsl(19, 100%, 51%);
+}
+
+.login button {
+    width: 150px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    outline: none;
+    transition: 400ms;
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: .8;
+}
+
+.login button {
+    margin: 5% auto;
+}
+
+.login button:hover {
+    transform: translateY(10px);
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.app-logo img {
+    max-width: 200px;
+}
+
+.avatar-logo {
+    margin-left: 0;
+}
+
+.avatar-logo img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.app-titles h1 {
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+.nected {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.nav-menu {
+    margin-top: 1%;
+    display: flex;
+}
+
+.nav-menu nav {
+    width: 250px;
+    border-right: 1px solid cornflowerblue;
+}
+
+.nav-menu li {
+    list-style: none;
+    display: flex;
+    align-items: center;   
+}
+
+.nav-menu a {
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    margin-top: 5%;
+    max-width: 40px;
+    align-items: center;
+}
+
+.app-intro {
+    width: 700px;
+    margin-left: 3%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.resources {
+    padding-left: 2%;
+    text-align: center;
+}
+
+.external-resources {
+    display: flex;
+    padding-left: 2%;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.description {
+    font-size: 12px;
+}
+
+footer {
+    padding-top: 2%;
+    border-top: 1px solid cornflowerblue;
+    text-align: center;
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    list-style: none;
+    margin-right: 5%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.profile-details {
+    width: 700px;
+    text-align: center;
+}
+
+.profile-details figure {
+    align-items: center;
+}
+
+.profile-details img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.profile-details ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-left-section {
+    margin-right: 10%;
+}
+
+.details-left-section li {
+    margin-bottom: 15%;
+}
+
+.details-right-section li {
+    margin-bottom: 15%;
+}
+
+.details-left-section span {
+    padding: 8px;
+}
+
+.details-right-section span {
+    padding: 8px;
+}
+
+.delete-btn {
+    width: 130px;
+    height: 30px;
+    border: 0;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    outline: none;
+    transition: 400ms;
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: .8;
+}
+
+.delete-btn:hover {
+    transform: translateY(-10px);
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.profile-details form p {
+    font-size: 12px;
+    color: crimson;
+}
+
+nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    background: hsl(176, 68%, 64%);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+nav a:hover:after {
+    width: 100%; 
+    left: 0;
+}
+
+.about-section {
+    width: 700px;
+    margin-left: 3%;
+}
+
+.first-para, .second-para {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+    line-height: 1.5;
+}
+
+.first-para img, .second-para img {
+    margin: 0;
+    max-width: 250px;
+}
+
+.first-para p {
+    margin-left: 3%;
+}
+
+.second-para p {
+    margin-right: 3%;
+}
+
+.contact-page {
+    width: 700px;
+    margin-left: 3%;
+}
+
+.company-contact {
+    display: flex;
+}
+
+.company-contact figure {
+    display: flex;
+    align-items: center;
+}
+.company-contact img {
+    margin: 0;
+}
+
+.privacy {
+    width: 700px;
+    margin-left: 3%;
+}
