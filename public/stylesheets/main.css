@@ -150,6 +150,49 @@ input:focus {
     background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
 }
 
+.profile-edit {
+    width: 700px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.profile-edit form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-edit input {
+    border: 0;
+    padding: 0 1%;
+    margin-bottom: 2%;
+    width: 150px;
+    height: 25px;
+    border: 1px solid hsla(0, 16%, 70%, .9);
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    background: transparent;
+    
+}
+
+.profile-edit button {
+    width: 150px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    outline: none;
+    transition: 400ms;
+    overflow: visible;
+    cursor: pointer;
+    transition: 0.6s;
+    opacity: .8;
+}
+
+.profile-edit button:hover {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
 .app-logo img {
     max-width: 200px;
 }
