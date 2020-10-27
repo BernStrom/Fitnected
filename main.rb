@@ -33,9 +33,9 @@ end
 
 # INSERTS the newly registered user details into the db
 post '/register' do
-  password_digest = BCrypt::Password.create(params['password'])
+  encrypted_pass = BCrypt::Password.create(params['password'])
 
-  create_user(params['first_name'], params['last_name'], params['email'], params['password_digest'], params['fitness_goal'], params['current_weight'], params['goal_weight'], params['avatar_url'])
+  create_user(params['first_name'], params['last_name'], params['email'], encrypted_pass, params['fitness_goal'], params['current_weight'], params['goal_weight'], params['avatar_url'])
   redirect "/"
 end
 
