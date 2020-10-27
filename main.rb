@@ -76,6 +76,7 @@ end
 
 delete '/profile/:id' do
   delete_user(params['id'])
+  session[:user_id] = nil
   redirect "/"
 end
 
