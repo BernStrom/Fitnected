@@ -1,7 +1,11 @@
 <section class=profile-details>
     
     <figure>
-        <img src="<%= current_user['avatar_url'] %>" alt="user_avatar"> 
+        <% if current_user['avatar_url'] == '' %>
+            <img src="/images/default_user_icon.png" alt="annoymous_avatar">
+        <% else %>
+            <img src="<%= current_user['avatar_url'] %>" alt="user_avatar">
+        <% end %> 
     </figure>
 
     <a href="/profile/<%= current_user['id'] %>/edit">Edit Profile</a>
